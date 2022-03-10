@@ -5,9 +5,10 @@ import discord
 from clients.custom_bot_client import CustomBotClient
 from cogs.listeners import Listeners
 from cogs.command_err_handler import CommandErrHandler
+from decouple import config
 
 
-TOKEN = os.getenv("TOKEN", None)
+TOKEN = config('TOKEN')
 
 def main():
 
